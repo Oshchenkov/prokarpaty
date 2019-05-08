@@ -57,9 +57,7 @@ add_action( 'after_setup_theme', 'prokarpaty_setup' );
 function load_stylesheets(){
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css' , array(), null, 'all');
 	wp_enqueue_style('bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' , array(), null, 'all');
-	wp_enqueue_style('theme-header', get_template_directory_uri() . '/css/header.css' , array(), 1, 'all');
-	wp_enqueue_style('theme-main-content', get_template_directory_uri() . '/css/main-content.css' , array(), 1, 'all');
-	wp_enqueue_style('theme-footer', get_template_directory_uri() . '/css/footer.css' , array(), 1, 'all');
+	wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.min.css' , array(), 1, 'all');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css' , array(), 1, 'all');
 }
 add_action( 'wp_enqueue_scripts', 'load_stylesheets' );

@@ -1,0 +1,65 @@
+//----------------------------------------
+// 				Main Content
+//----------------------------------------
+
+//----------------------------------------
+// 				Front Page
+//----------------------------------------
+
+.heroImage
+    background-image: url("http://prokarpaty-tour.info/wp-content/uploads/mountain_river_4-wallpaper-2560x144011.jpg")
+    background-size: cover
+    background-position: bottom center
+    height: 500px
+    display: none
+    flex-direction: column
+    justify-content: center
+.container-fluid.heroImage
+    padding-left: 0
+    padding-right: 0
+
+.heroImageBlock
+    background-color: $c-whiteBg
+    padding-top: 30px
+    padding-bottom: 30px
+    &__title
+        font-family: 'OpenSans', sans-serif
+        color: $c-textYellow
+        font-size: 36px
+        font-weight: 600
+        text-shadow: $text-shadow
+    &__desc
+        color: $c-mainAccentLight
+        font-weight: bold
+        text-shadow: $text-shadow
+        font-size: 36px
+
++media-up($lg)
+    .heroImage
+        display: flex
+
+
+
+
+
+
+
+
+
+
+
+.tur-content-ext-view-all-btn
+    box-shadow: $box-shadow
+
+.seo_text_title,
+.seo_text_title h2
+    font-size: 24px
+    color: $c-green
+    text-align: center
+    font-weight: bold
+    margin-bottom: 30px
+
++media-up($lg)
+    .seo_text_title,
+    .seo_text_title h2
+        font-size: 30px

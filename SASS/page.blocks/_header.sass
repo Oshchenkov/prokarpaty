@@ -1,0 +1,181 @@
+//----------------------------------------
+// 				Header
+//----------------------------------------
+
+.headerMain
+	border-bottom: 5px solid $c-mainBorder
+
+.topInfo
+	background-color: $c-mainBgAccent
+	font-size: 14px
+	color: $c-white
+	& a
+		color: $c-white
+		text-decoration: none
+	&__col-contactInfo
+		padding-top: 4px
+		padding-bottom: 4px
+	&__col-logo
+    	position: relative
+
+.logo__link
+    display: inline-block
+    z-index: 99
+
+.logo__link-img
+    display: block
+
+
+
+.topInfo__socialCol>a
+    margin-right: 10px
+
+.socialLink
+    color: $c-white
+
+.socialLink i
+    font-size: 16px
+
+.topInfo__mail>i,
+.topInfo__tel>i
+    margin-right: 5px
+
+
+.topInfo__tel>i
+    transform: rotateY(180deg)
+
+
+/* PC menu */
+
+.mainMenu-pc__ul
+	padding: 0 0 0 0
+	text-transform: uppercase
+	list-style: none
+	margin: 0 auto
+
+.mainMenu-pc__ul>.menu-item
+	float: left
+	display: block
+	position: relative
+
+.mainMenu-pc__ul>.menu-item>a:hover:before
+	content: "\A"
+    border-style: solid
+    border-width: 10px 10px 10px 10px
+    border-color: transparent transparent $c-mainAccent transparent
+    position: absolute
+    left: calc( 50% - 10px )
+    bottom: 0px
+
+.mainMenu-pc__ul>.menu-item>a
+	color: $c-black
+	padding: 30px 8px
+	line-height: 20px
+	font-size: 14px
+	display: block
+
+.mainMenu-pc__ul .menu-item>a:hover
+	color: $c-mainAccent
+	text-decoration: none
+
+.mainMenu-pc__ul .sub-menu
+	list-style: none
+	padding: 0
+	font-size: 12px
+	min-width: 140px
+	margin: 0
+	position: absolute
+	display: none
+	z-index: 199
+
+.wpml-ls-item .sub-menu
+	min-width: initial
+
+.mainMenu-pc__ul .menu-item-has-children:hover>.sub-menu
+    display: block
+
+.mainMenu-pc__ul .sub-menu>li
+    background-color: $c-white
+    border: 1px solid #ccc
+
+.mainMenu-pc__ul .sub-menu>li>a
+    padding: 8px 10px
+    display: block
+    background-color: rgba(255, 255, 255, 0.8)
+    color: $c-black
+
+/* Mobile menu */
+
+.mainMenu__container.navbar
+	padding: 0
+
+
+.mainMenu__ul,
+.mainMenu-mobile .sub-menu
+	list-style: none
+	padding: 0
+	margin: 0
+	text-transform: uppercase
+
+.mainMenu-mobile .sub-menu
+	padding-left: 30px
+.mainMenu__ul>.menu-item>a,
+.mainMenu-mobile .sub-menu>.menu-item>a
+    color: #000
+    display: block
+    padding: 8px 15px
+    font-size: 16px
+    border: 1px solid lightgrey
+.mainMenu__ul>.menu-item>a:hover,
+.mainMenu-mobile .sub-menu>.menu-item>a:hover
+    color: $c-mainAccent
+    text-decoration: none
+    background-color: #eee
+	
+
+.wpml-ls-item a>img
+	vertical-align: baseline
+
+
++media-down($lg)
+	.topInfo
+		text-align: center
+
+	.topInfo__col-logo
+		margin: auto
+	.topInfo__row-uzgorod,
+	.topInfo__row-lviv
+		padding-bottom: 20px
+	
++media-up($lg)
+	.topInfo>.container
+		padding: 0
+	
+	.topInfo__col-logo
+		min-width: calc(157px + 30px )
+	
+	.logo__link
+		position: absolute
+		top: 20px
+		left: 15px
+		right: 15px
+	
+	.mainMenu-pc__col
+		margin-right: -30px
+	
+	.topInfo__socialCol
+		min-width: 50px
+	
+	.topInfo__cityCol
+		min-width: 100px
+	
+	.topInfo__mailCol
+		min-width: 200px
+	
+	.topInfo__telCol
+		min-width: 148px
+
++media-up($xl)
+	.topInfo__col-logo
+		min-width: calc(157px + 15px + 60px)
+	
