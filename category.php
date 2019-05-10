@@ -32,6 +32,20 @@ get_header();
     
     // Category Hero Block
 
+    /* Category id (ru | uk)
+    *
+    * 40  | 63       tours-uzhorod
+    * 113 | 112      excursions-europe
+    * 52  | 71       calendar-of-tours
+    * 3   | 68       excursions-uzhorod
+    * 5   | 72       grafik-of-excursions-uzhorod
+    * 18  | 73       active-rest-uzhorod
+    * 19  | 83       services
+    * 4   | 82       articles
+    * 7   | 64       reviews
+    * 
+     */
+
     if ( ($cat_id == 113) || ($cat_id == 64) || ($cat_id == 68)|| ($cat_id == 82) || ($cat_id == 112) || ($cat_id == 799) ){
         $cat_hero_img   = 'slider_image_exs';
         $cat_hero_title = 'ecs_head_slider_row1';
@@ -111,10 +125,74 @@ get_header();
     </div><!-- /.container -->
 
     <div class="container">
-
-        <h1 class="container tur-our-exc-title">
-            <?php echo __('Экскурсии', 'prokarpaty'); ?><span class="tur-our-exc-title-red"> <?php echo __('в Европу', 'prokarpaty'); ?></span>
-        </h1>
+        <?php if( ($cat_id == 113) || ($cat_id == 112) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("Экскурсии", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("в Европу", "prokarpaty") . '</span>
+            </h1>
+            ';
+        } 
+        elseif ( ($cat_id == 40) || ($cat_id == 63) ) {
+            echo '
+            <h1 class="container tur-our-exc-title">
+            <span class="tur-our-exc-title-red">'. __("ТУРЫ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 52) || ($cat_id == 71) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("Календарь", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("туров", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 3) || ($cat_id == 68) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("НАШИ", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("ЭКСКУРСИИ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 5) || ($cat_id == 72) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("ГРАФИК", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("ЭКСКУРСИЙ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 18) || ($cat_id == 73) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("АКТИВНЫЙ", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("ОТДЫХ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 19) || ($cat_id == 83) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("НАШИ", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("УСЛУГИ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 4) || ($cat_id == 82) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("СТАТЬИ", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("О ТУРИЗМЕ В КАРПАТАХ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        elseif ( ($cat_id == 7) || ($cat_id == 64) ){
+            echo '
+            <h1 class="container tur-our-exc-title">' . __("ОТЗЫВЫ", "prokarpaty") . '
+            <span class="tur-our-exc-title-red">'. __("ТУРИСТОВ", "prokarpaty") . '</span>
+            </h1>
+            ';
+        }
+        ?>
+        <!-- <h1 class="container tur-our-exc-title">
+            <?php echo __('Экскурсии ', 'prokarpaty'); ?><span class="tur-our-exc-title-red"> <?php echo __('в Европу', 'prokarpaty'); ?></span>
+        </h1> -->
+        
         <div class="categoryDesc">
             <?php echo category_description(); ?>
         </div>
@@ -129,7 +207,7 @@ get_header();
         $posts = get_posts(array(
             'numberposts'     => 100, // тоже самое что posts_per_page
             'offset'          => 0,
-            'category'        => '113',
+            'category'        => $cat_id,
             'orderby'         => 'post_date',
             'order'           => 'DESC',
             'include'         => '',
@@ -146,7 +224,7 @@ get_header();
 
         <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
             <p class="tur-ecs-filter-title">
-                <?php $category_link1 = get_category_link('113'); ?>
+                <?php $category_link1 = get_category_link($cat_id); ?>
 
                 <a href="<?php echo $category_link1; ?>"><span>Все экскурсии</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
                 <a href="<?php echo $category_link1; ?>?tag=slovakiya"><span><?php echo __('Словакия', 'prokarpaty'); ?></span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
@@ -160,10 +238,11 @@ get_header();
         <div class="container-fluid">
             <div class="container">
                 <div class="tur-content-our-exc-block">
+                    <div class="row">
                     <?php $i = 0; ?>
-                    <?php query_posts('posts_per_page=100&cat=113&tag=' . $tag); ?>
+                    <?php query_posts('posts_per_page=100&cat='. $cat_id . '&tag=' . $tag); ?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                            <?php if (in_category('113')) { ?>
+                            <?php if (in_category($cat_id)) { ?>
 
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="col-lg-4 col-md-6 col-sm-6">
@@ -221,6 +300,7 @@ get_header();
                     <?php if ($i % 3 !== 0) {
                         echo '</div>';
                     } ?>
+                    </div><!-- /.row -->
                 </div>
             </div>
         </div>
