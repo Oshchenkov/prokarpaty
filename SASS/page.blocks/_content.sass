@@ -76,13 +76,14 @@
 .tur-content-ext-view-all-btn
     box-shadow: $box-shadow
 
-.seo_text_title,
-.seo_text_title h2
+.seo_text_title
     font-size: 24px
     color: $c-green
     text-align: center
     font-weight: bold
-    margin-bottom: 30px
+    margin-bottom: 10px
+.seo_text_title h2
+    margin-bottom: 0
 
 +media-up($lg)
     .seo_text_title,
@@ -116,3 +117,62 @@
     top: 103px
     left: 375px
     transform: rotate(-21deg)
+
+//----------------------------------------
+// 				Category Page
+//----------------------------------------
+.tur-about-breadcrumb
+    margin-top: 10px
+    margin-bottom: 10px
+.tur-about-breadcrumb > .breadcrumb
+    margin-top: 0
+    margin-bottom: 0
+
+.tur-about-breadcrumb .breadcrumb>img
+    width: 13px
+    height: 13px
+    display: inline-block
+    margin-top: 5px
+    margin-left: 5px
+    margin-right: 5px
+
+.wpml-breadcrumb
+    margin-top: 30px
+    margin-bottom: 30px
+.wpml-breadcrumb a
+    color: $c-mainAccent
+
+
+.catHero
+    padding: 0
+    height: 200px
+    width: 100%
+    position: relative
+    background-color: $c-mainBgAccent
+    &__img
+        height: 100%
+        width: 100%
+
+.catHero__container
+    position: absolute
+    top: 40px
+    width: 100%
+    left: 0
+    right: 0
+
+.catHero__title,
+.catHero__desc
+    text-shadow: $text-shadow
+    font-family: 'OpenSans', sans-serif
+    font-weight: bold
+
+.catHero__title
+    color: $c-textYellow
+    font-size: 36px
+
+.catHero__desc
+    color: $c-mainAccentLight
+    font-size: 36px
+
+.tur-ecs-filter-title
+    display: flex

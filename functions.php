@@ -60,7 +60,27 @@ if ( ! function_exists( 'prokarpaty_setup' ) ) :
 		 }
 		 add_filter('excerpt_more', 'new_excerpt_more');
 	 
-
+		 function the_breadcrumb() {
+			if (!is_front_page()) {
+				echo '<a href="';
+				echo get_option('home');
+				echo __('">Головна','prokarpaty');
+				echo '</a> <img src="/wp-content/themes/prokarpaty/images/tur-breadcrumb.png"> ';
+				if (is_category()) {        
+					$category = get_the_category(); 
+					echo $category[0]->cat_name;            
+				} elseif (is_page()) {
+					echo the_title();
+					} else if (is_single()) {
+						the_category(' ');
+						echo ' <img src="/wp-content/themes/prokarpaty/images/tur-breadcrumb.png"> ';
+						the_title();
+						}
+			} else {
+				echo 'Главная';
+				}
+		}
+	
 	
 	}
 endif;

@@ -14,8 +14,8 @@
 <!-- -------------------------------- Footer ---------------------------------------------->
 
 <footer class="mainFooter">
-	<div class="mainFooter__separatorImg separatorImg"></div><!-- /.mainFooter__separatorImg -->
-	
+	<div class="mainFooter__separatorImg separatorImg"></div>
+
 	<div class="mainFooter__widget widget">
 		<div class="container">
 			<div class="row">
