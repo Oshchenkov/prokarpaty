@@ -14,26 +14,25 @@
 <!-- -------------------------------- Footer ---------------------------------------------->
 
 <footer class="mainFooter">
-	<div class="mainFooter__separatorImg separatorImg">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/tur-content-hr2.png" alt="">
-	</div><!-- /.mainFooter__separatorImg -->
+	<div class="mainFooter__separatorImg separatorImg"></div><!-- /.mainFooter__separatorImg -->
+	
 	<div class="mainFooter__widget widget">
 		<div class="container">
 			<div class="row">
-			<div class="col-lg-3 col-md-6 widget__col">
+				<div class="col-lg-3 col-md-6 widget__col 	d-none d-md-block">
 					<div class="mainFooter-logo logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo__link">
+						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="logo__link">
 							<img class="logo__link-img" src="<?php echo get_template_directory_uri(); ?>/images/tur-head-logo.png" alt="Main logo" class="logo__img">
 						</a><!-- /.logo__link -->
 					</div><!-- /.mainFooter-logo -->
-					<?php 
-						wp_nav_menu( array(
-							'menu'              => "footer-menu",
-							'container'         => "nav",
-							'container_class'   => "mainFooter-nav",
-							'menu_class'        => "mainFooter-nav__ul clearfix",
-							'theme_location'    => "footer-menu", 
-						) );
+					<?php
+					wp_nav_menu(array(
+						'menu'              => "footer-menu",
+						'container'         => "nav",
+						'container_class'   => "mainFooter-nav",
+						'menu_class'        => "mainFooter-nav__ul clearfix",
+						'theme_location'    => "footer-menu",
+					));
 					?>
 				</div><!-- /.col -->
 				<div class="col-lg-3 col-md-6 widget__col">
@@ -48,21 +47,21 @@
 						</div>
 					</div><!-- /.row -->
 					<div class="rowCont">
-						<?php if ( is_active_sidebar( 'footer_second_col' ) ) : ?>
-							<div  class=" widgetContainer" role="complementary">
-								<?php dynamic_sidebar( 'footer_second_col' ); ?>
+						<?php if (is_active_sidebar('footer_second_col')) : ?>
+							<div class=" widgetContainer" role="complementary">
+								<?php dynamic_sidebar('footer_second_col'); ?>
 							</div><!-- #primary-sidebar -->
 						<?php endif; ?>
 					</div><!-- /.row -->
-				
+
 				</div><!-- /.col -->
 				<div class="col-lg-3 col-md-6 widget__col">
 					<div class="foterContact">
 						<div class="foterContact__city">
-							<?php _e( 'г.Львов:', 'prokarpaty' ); ?>
+							<?php _e('г.Львов:', 'prokarpaty'); ?>
 						</div><!-- /.foterContact__city -->
 						<div class="foterContact__st">
-							<?php _e( 'Проспект Свободы, <br> 5 (ТЦ Плазма, 2 этаж)', 'prokarpaty' ); ?>   
+							<?php _e('Проспект Свободы, <br> 5 (ТЦ Плазма, 2 этаж)', 'prokarpaty'); ?>
 						</div><!-- /.foterContact__st -->
 						<div class="foterContact__phone">
 							<a href="tel:+380672105980" class="foterContact__phone-a">
@@ -97,10 +96,10 @@
 				<div class="col-lg-3 col-md-6 widget__col">
 					<div class="foterContact">
 						<div class="foterContact__city">
-							<?php _e( 'г. Ужгород:', 'prokarpaty' ); ?>
+							<?php _e('г. Ужгород:', 'prokarpaty'); ?>
 						</div><!-- /.foterContact__city -->
 						<div class="foterContact__st">
-							<?php _e( 'улица Корзо, 3', 'prokarpaty' ); ?>
+							<?php _e('улица Корзо, 3', 'prokarpaty'); ?>
 						</div><!-- /.foterContact__st -->
 						<div class="foterContact__phone">
 							<a href="tel:+380997767729" class="foterContact__phone-a">
@@ -148,15 +147,49 @@
 		<div class="container">
 			<div class="row">
 				<div class="copyRight__text">
-					© 2008-<?php echo date('Y'); echo __(' Все права защищены', 'prokarpaty'); ?>
+					© 2008-<?php echo date('Y');
+							echo __(' Все права защищены', 'prokarpaty'); ?>
 				</div><!-- /.copyRight__text -->
 			</div><!-- /.row center -->
 		</div><!-- /.container -->
 	</div><!-- /.mainFooter__copyRight -->
-	
+
+	<!-- Modal Form -->
+	<div class="modal fade bs-example-modal-sm2 modal-z-index" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myLargeModalLabel"><?php echo __('Заказать обратный звонок', 'EutoTour'); ?></h4>
+					<div class="modal-body">
+						<?php if (is_active_sidebar('modal_cf')) : ?>
+							<?php dynamic_sidebar('modal_cf'); ?>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="callBack">
+		<a href="#" class="callBack__link" data-toggle="modal" data-target=".bs-example-modal-sm2">
+			<i class="fas fa-phone"></i>
+		</a>
+	</div>
+	<!-- //Modal Form -->
+	<!-- Mobile nav footer -->
+	<div class="contacts-media">
+		<a href="tel:+380997767729" class="contacts-item contacts-tel mdi mdi-phone">
+			<i class="glyphicon glyphicon-earphone"></i><!-- /.glyphicon glyphicon-earphone -->
+		</a>
+		<a href="mailto:prokarpaty@gmail.com" class="contacts-mail mdi mdi-email-outline contacts-item">
+			<i class="glyphicon glyphicon-envelope"></i><!-- /.glyphicon glyphicon-earphone -->
+		</a>
+	</div>
+
 </footer><!-- /.mainFooter -->
 
 <?php wp_footer(); ?>
-   
+
 </body>
+
 </html>

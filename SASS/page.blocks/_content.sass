@@ -2,6 +2,7 @@
 // 				Main Content
 //----------------------------------------
 
+
 //----------------------------------------
 // 				Front Page
 //----------------------------------------
@@ -37,14 +38,38 @@
 +media-up($lg)
     .heroImage
         display: flex
+    .tur-head-form-all-margin
+        margin-bottom: 60px
 
 
 
+.tur-head-form-all2 .wpcf7-form
+    display: flex
+.tur-head-form-title
+    justify-content: center
+.tur-head-form-all-margin div.wpcf7-response-output
+    position: absolute
+    right: 0
+    bottom: 10px
 
+.tur-content-near-exc
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+.tur-content-near-exc-time,
+.tur-content-near-exc-price
+    float: none
+    margin-bottom: 0
+    padding: 5px
 
-
-
-
+.tur-content-near-exc-price
+    display: flex
+    flex-direction: row
+    align-items: center
+.tur-content-near-exc-price>img
+    max-width: 16px
+    height: 12px
 
 
 
@@ -63,3 +88,31 @@
     .seo_text_title,
     .seo_text_title h2
         font-size: 30px
+    .wpcf7-form
+        flex-wrap: wrap
+        display: flex
+
+
+.tur-content-exc-price
+    display: inline-block
+    float: right
+    vertical-align: middle
+    &>img
+        display: inline-block
+        vertical-align: baseline
+
++media-down($md)
+    .tur-content-exc
+        margin-left: auto
+        margin-right: auto
+
+.tur-content-news-more
+    margin-right: 20px
+
+.tur-content-our-plus-line3
+    height: 57px
+    width: 100px
+    position: absolute
+    top: 103px
+    left: 375px
+    transform: rotate(-21deg)

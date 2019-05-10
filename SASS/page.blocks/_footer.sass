@@ -3,10 +3,16 @@
 //----------------------------------------
 .mainFooter
 .separatorImg
+    height: 50px
     margin: 30px 0
+    background: #fff url(../images/tur-content-hr2.png) repeat-x
 .separatorImg>img
     display: block
     width: 100%
+
+.separatorImg.separatorImg_l
+    background: #fff url(../images/tur-content-hr1.png) repeat-x
+
 
 
 .mainFooter__widget
@@ -65,7 +71,8 @@
 //----------------------------------------
 // 				imput
 //----------------------------------------
-
+.mainFooter .wpcf7-form
+    flex-direction: column
 input[type=text]
     display: flex
     width: 100%
@@ -179,6 +186,25 @@ div.wpcf7-response-output
 
 
 
+
+//----------------------------------------
+// 				Modal
+//----------------------------------------
+.modal.show .modal-dialog
+    margin-top: 20%
+.modal-header
+    display: flex
+    flex-direction: column
+.modal-body
+    padding-left: 10px
+    padding-right: 10px
+.modal-header .close
+    position: absolute
+    padding: 10px
+    right: 15px
+.modal-title
+    font-size: 20px
+    margin-top: 20px
 
 //----------------------------------------
 // 				CopyRight

@@ -1,12 +1,13 @@
 @import "vars"
 @import "_mixin"
 @import "fonts"   
-
+@import "page.blocks/_old-style" 
 
 
 body
     font-family: 'Open Sans', sans-serif
     font-size: 16px
+    overflow-x: hidden
    
 img
     display: block
@@ -22,9 +23,11 @@ img
     margin-left: -50vw
     margin-right: -50vw
 
+.hide
+    display: none
 
 
-@import "page.blocks/_old-style" 
+
 
 @import "page.blocks/_header" 
 @import "page.blocks/_content" 

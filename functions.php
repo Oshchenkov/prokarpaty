@@ -48,6 +48,19 @@ if ( ! function_exists( 'prokarpaty_setup' ) ) :
 			'footer-menu' => esc_html__( 'Footer menu', 'prokarpaty' ),
 		) );
 
+		// Add functionality from old theme 
+
+		function new_excerpt_length($length) {
+			return 20;
+		 }
+		 add_filter('excerpt_length', 'new_excerpt_length');
+	 
+		 function new_excerpt_more($more) {
+			 return '...';
+		 }
+		 add_filter('excerpt_more', 'new_excerpt_more');
+	 
+
 	
 	}
 endif;
@@ -57,7 +70,9 @@ add_action( 'after_setup_theme', 'prokarpaty_setup' );
 function load_stylesheets(){
 	wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css' , array(), null, 'all');
 	wp_enqueue_style('bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' , array(), null, 'all');
-	wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.min.css' , array(), 1, 'all');
+	// wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.min.css' , array(), 1, 'all');
+	wp_enqueue_style('bootstrap_glyphIcons', get_template_directory_uri() . '/inc/glyphicons-only-bootstrap/css/bootstrap_glyphIcons.min.css' , array(), 1, 'all');
+	wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.css' , array(), 1, 'all');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css' , array(), 1, 'all');
 }
 add_action( 'wp_enqueue_scripts', 'load_stylesheets' );
@@ -70,6 +85,7 @@ function load_scripts(){
 	wp_enqueue_script('popper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'), null, true);
 	wp_enqueue_script('bootstrap-js', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), null, true);
 
+	wp_enqueue_script( 'ad-gallery', get_template_directory_uri() . '/js/jquery.ad-gallery.js' , array ( 'jquery' ), 1.1, true);
 	wp_enqueue_script( 'common-js', get_template_directory_uri() . '/js/common.js' , array ( 'jquery' ), 1.1, true);
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts');
@@ -88,6 +104,29 @@ function theme_widgets_init() {
 		'before_title'  => '<div class="d-none">',
 		'after_title'   => '</div>'
 	) );
+	
+	register_sidebar( array(
+		'name'          => __( 'Front page main contact form', 'prokarpaty' ),
+		'id'            => 'front_top_cf',    // ID should be LOWERCASE  ! ! !
+		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
+		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="d-none">',
+		'after_title'   => '</div>'
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Modal contact form', 'prokarpaty' ),
+		'id'            => 'modal_cf',    // ID should be LOWERCASE  ! ! !
+		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
+		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="d-none">',
+		'after_title'   => '</div>'
+	) );
+	
 
 
 }

@@ -58,14 +58,12 @@
 	display: block
 	position: relative
 
-.mainMenu-pc__ul>.menu-item>a:hover:before
-	content: "\A"
-    border-style: solid
-    border-width: 10px 10px 10px 10px
-    border-color: transparent transparent $c-mainAccent transparent
-    position: absolute
-    left: calc( 50% - 10px )
-    bottom: 0px
++media-up($lg)
+	.mainMenu-pc__ul>.menu-item.current-menu-item,
+	.mainMenu-pc__ul>.menu-item:hover
+		background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat
+	
+
 
 .mainMenu-pc__ul>.menu-item>a
 	color: $c-black
@@ -73,6 +71,20 @@
 	line-height: 20px
 	font-size: 14px
 	display: block
+.mainMenu-pc__ul>.menu-item.current-menu-item>a
+	color:  $c-mainAccent
+.sub-menu>li>a:hover,
+#menu-item-4356 .sub-menu>li>a:hover,
+.mainMenu-pc__ul .sub-menu > li > a:hover
+	color:  $c-mainAccent !important
+
+
++media-up($lg)
+	.mainMenu-pc__ul .sub-menu > li.menu-item-type-wpml_ls_menu_item > a
+		padding: 10px
+	.sub-menu>li.wpml-ls-item
+		width: 40px
+
 
 .mainMenu-pc__ul .menu-item>a:hover
 	color: $c-mainAccent
