@@ -16,6 +16,11 @@ get_header();
 ?>
 
 <?php
+
+    /*
+    * Get the_field(ACF plugin) from post 
+    */
+
     if (ICL_LANGUAGE_CODE == 'ru') {
         $post = get_post(115); // Главный слайдер на всех страницах
     } elseif (ICL_LANGUAGE_CODE == 'uk') {
@@ -25,10 +30,11 @@ get_header();
     }
 
 
-    // Category id
+    // Category variables
 
     $category = get_category( get_query_var( 'cat' ) );
     $cat_id = $category->cat_ID;
+    $category_link1 = get_category_link($cat_id);
     
     // Category Hero Block
 
@@ -44,7 +50,7 @@ get_header();
     * 4   | 82       articles
     * 7   | 64       reviews
     * 
-     */
+    */
 
     if ( ($cat_id == 113) || ($cat_id == 64) || ($cat_id == 68)|| ($cat_id == 82) || ($cat_id == 112) || ($cat_id == 799) ){
         $cat_hero_img   = 'slider_image_exs';
@@ -121,10 +127,6 @@ get_header();
     </div>
 
     <div class="container">
-        <?php echo  $cat_id; ?>
-    </div><!-- /.container -->
-
-    <div class="container">
         <?php if( ($cat_id == 113) || ($cat_id == 112) ){
             echo '
             <h1 class="container tur-our-exc-title">' . __("Экскурсии", "prokarpaty") . '
@@ -188,10 +190,13 @@ get_header();
             </h1>
             ';
         }
+        else{
+            echo '
+            <h1 class="container tur-our-exc-title">' .  get_cat_name( $cat_id  ) . '
+            </h1>
+            ';
+        }
         ?>
-        <!-- <h1 class="container tur-our-exc-title">
-            <?php echo __('Экскурсии ', 'prokarpaty'); ?><span class="tur-our-exc-title-red"> <?php echo __('в Европу', 'prokarpaty'); ?></span>
-        </h1> -->
         
         <div class="categoryDesc">
             <?php echo category_description(); ?>
@@ -220,21 +225,94 @@ get_header();
             'post_status'     => 'publish',
             'tag' => $tag
         ));
+        
+        // excursions-europe
+        if ($cat_id == 113){
+        echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Все экскурсии:</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=slovakiya"><span>Словакия</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=vengriya"><span>Венгрия</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=rumyniya"><span>Румыния</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=poland"><span>Польша</span></a>
+                </p>
+            </div>
+            ';
+        }
+        elseif ($cat_id == 112){
+            echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Всі екскурсії: </span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=slovatchyna"><span>Словаччина</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=ugorschyna"><span>Угорщина</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=rumuniya"><span>Румунія</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=poland"><span>Польша</span></a>
+                </p>
+            </div>
+            ';
+        }
+        // tours-uzhorod
+        elseif ($cat_id == 40){
+            echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Все Туры: </span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=novogodnie-tury"><span>Новогодние туры</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=gornolujnue"><span>Горнолыжные туры</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=majskie-turu"><span>Майские туры</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=vyhodnogo-dnya"><span>Туры выходного дня</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=degustatsionye-tury"><span>Дегустационные туры</span></a>
+                </p>
+            </div>
+            ';
+        }
+        elseif ($cat_id == 63){
+            echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Всі Тури: </span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=novorichni-tury-uk"><span>Новорічні тури</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=girskolujni-turu"><span>Гірськолижні тури</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=travnevi-tury-uk"><span>Травневі тури</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=vyhidnogo-dnya"><span>Тури вихідного дня</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=degustatsionye-tury-uk"><span>Дегустаційні тури</span></a>
+                </p>
+            </div>
+            ';
+        }
+        // excursions-uzhorod
+        elseif ($cat_id == 3){
+            echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Все экскурсии: </span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=odnodnevnye-ekskursii"><span>Однодневные экскурсии</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=dvuhdnevnaya"><span>Двухдневные экскурсии</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=spetsialnye-predlozheniya"><span>Специальные предложения</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=populyarnuye-ekskursii"><span>Самые популярные экскурсии</span></a>
+                </p>
+            </div>
+            ';
+        }
+        elseif ($cat_id == 68){
+            echo '
+            <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
+                <p class="tur-ecs-filter-title">
+                    <a href="' . $category_link1 . '"><span>Всі екскурсії: </span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=odnodeni-ekskursii"><span>Одноденні екскурсії</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=dvodeni-ekskyrsii"><span>Дводенні екскурсії</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=spetsialni-propozutsii"><span>Спеціальні пропозиції</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
+                    <a href="' . $category_link1 . '?tag=populyarni-ekskursii"><span>Найпопулярніші екскурсії</span></a>
+                </p>
+            </div>
+            ';
+        }
+        // active-rest-uzhorod
+
+
         ?>
-
-        <div class="container tur-ecs-filter-block" id="tur-ecs-filter-block-link">
-            <p class="tur-ecs-filter-title">
-                <?php $category_link1 = get_category_link($cat_id); ?>
-
-                <a href="<?php echo $category_link1; ?>"><span>Все экскурсии</span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
-                <a href="<?php echo $category_link1; ?>?tag=slovakiya"><span><?php echo __('Словакия', 'prokarpaty'); ?></span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
-                <a href="<?php echo $category_link1; ?>?tag=vengriya"><span><?php echo __('Венгрия', 'prokarpaty'); ?></span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
-                <a href="<?php echo $category_link1; ?>?tag=rumyniya"><span><?php echo __('Румыния', 'prokarpaty'); ?></span></a><img src="/wp-content/themes/prokarpaty/images/tur-ecs-filter-razd.png" hspace="10">
-                <a href="<?php echo $category_link1; ?>?tag=poland"><span><?php echo __('Польша', 'prokarpaty'); ?></span></a>
-
-            </p>
-        </div>
-
         <div class="container-fluid">
             <div class="container">
                 <div class="tur-content-our-exc-block">
@@ -307,13 +385,85 @@ get_header();
 
     </div><!-- /.categoryFilter -->
 
-    <div class=" separatorImg"></div>
-    <div class="container-fluid">
-        <?php
+    <?php 
+    // excursions-europe
+    if ($cat_id == 113){
         $my_post_obj = get_post(8118); // ID поста, seo_text in footer of the category
-        echo $my_post_obj->post_content;
-        ?>
-    </div>
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    elseif ($cat_id == 112){
+        $my_post_obj = get_post(8121); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    // tours-uzhorod
+    elseif ($cat_id == 40){
+        $my_post_obj = get_post(7138); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    elseif ($cat_id == 63){
+        $my_post_obj = get_post(7136); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    // tours-uzhorod
+    elseif ($cat_id == 3){
+        $my_post_obj = get_post(2570); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    elseif ($cat_id == 68){
+        $my_post_obj = get_post(6275); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    // active-rest-uzhorod
+    elseif ($cat_id == 18){
+        $my_post_obj = get_post(2566); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    elseif ($cat_id == 73){
+        $my_post_obj = get_post(5663); // ID поста, seo_text in footer of the category
+        echo '
+        <div class=" separatorImg"></div>
+        <div class="container-fluid">'
+            . $my_post_obj->post_content .
+        '</div>
+        ';
+    }
+    ?>
+    
 
     <div class="container">
         <div class="row tur-about-breadcrumb">
