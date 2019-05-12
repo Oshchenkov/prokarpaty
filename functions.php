@@ -146,6 +146,28 @@ function theme_widgets_init() {
 		'before_title'  => '<div class="d-none">',
 		'after_title'   => '</div>'
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Sidebar in posts contact form', 'prokarpaty' ),
+		'id'            => 'post_sidebar_cf',    // ID should be LOWERCASE  ! ! !
+		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
+		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="d-none">',
+		'after_title'   => '</div>'
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Modal in posts contact form', 'prokarpaty' ),
+		'id'            => 'post_modal_content_cf',    // ID should be LOWERCASE  ! ! !
+		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
+		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class="d-none">',
+		'after_title'   => '</div>'
+	) );
 	
 
 

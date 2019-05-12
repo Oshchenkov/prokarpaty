@@ -94,7 +94,6 @@ get_header();
 
 <main <?php echo 'id="category-id-' .  $cat_id  . '"' ?> class="mainContainer">
 
-    
     <div class="container-fluid catHero">
         <img src="<?php  the_field($cat_hero_img); ?>" alt="catHero__img" class="catHero__img">
         <!-- <img src="https://prokarpaty-tour.info/wp-content/uploads/ekskursiiї.jpg" alt="catHero__img" class="catHero__img"> -->
@@ -112,20 +111,12 @@ get_header();
     </div><!-- /.container-fluid catHero -->
 
     <div class="container-fluid">
-        <?php
-        while (have_posts()) :
-            the_post();
-            $postID = get_the_ID();
-        endwhile;
-        $post = get_post($postID);
-        ?>
         <div class="container">
-            <div class="row tur-about-breadcrumb">
-                <p class="breadcrumb"><?php the_breadcrumb(); ?></p>
-            </div>
+            <div class="breadcrumbWPML-nav">
+                <?php do_action('icl_navigation_breadcrumb', ['separator']); ?>
+            </div><!-- /.breadcrumbWPML-nav -->
         </div>
     </div>
-
     <div class="container">
         <?php if( ($cat_id == 113) || ($cat_id == 112) ){
             echo '
