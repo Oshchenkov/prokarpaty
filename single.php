@@ -125,6 +125,7 @@ $cat_id = $postCategories[0];
         </div>
     </div>
     
+
     <?php
         $post = $wp_query->post;
  

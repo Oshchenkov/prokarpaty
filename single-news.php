@@ -25,6 +25,9 @@
         <div class="row">
             <div class="col-12">
                 <?php the_content(); ?>
+                <div class="container postRating">
+                    <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+                </div>
             </div><!-- /.col-12 -->
         </div>
     </div>

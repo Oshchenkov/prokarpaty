@@ -5,13 +5,13 @@
                 <?php the_title(); ?>
             </h1>
         </div>
+        
         <div class="row">
             <div class="col-lg-7 tur-ecs2-right-otstup">
                 <?php the_content(); ?>
-                <?php
-                $data = get_field('ecs_map');
-
-                ?>
+                <div class="container postRating">
+                    <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+                </div>
                 <div class="row tur-ecs2-hr1">
                     <p class="tur-ecs2-title1"><?php echo __('Периодичность', 'prokarpaty'); ?></p>
                 </div>
