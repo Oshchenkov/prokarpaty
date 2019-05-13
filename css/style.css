@@ -82,7 +82,7 @@
 }
 
 .tur-head-contacts2 {
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-head-grad.png);
+  background: url(/wp-content/themes/prokarpaty/images/tur-head-grad.png);
   height: 54px;
 }
 
@@ -105,42 +105,42 @@
 .navbar-default .navbar-nav > li > a:hover {
   color: #bc2425;
   background-color: none;
-  background: bottom url(/wp-content/themes/eurotourtheme3/images/tur-header-menu-tr.png) no-repeat;
+  background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat;
 }
 
 .navbar-default .navbar-nav .current_page_item a {
   color: #bc2425;
   background-color: none;
-  background: bottom url(/wp-content/themes/eurotourtheme3/images/tur-header-menu-tr.png) no-repeat;
+  background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat;
 }
 
 .tur-footer-menu .current_page_item a {
   color: #b91616;
-  background: left url(/wp-content/themes/eurotourtheme3/images/tur-footer-menu-tr.png) no-repeat;
+  background: left url(/wp-content/themes/prokarpaty/images/tur-footer-menu-tr.png) no-repeat;
   text-decoration: none;
 }
 
 .navbar-default .navbar-nav .current-menu-item a {
   color: #bc2425;
   background-color: none;
-  background: bottom url(/wp-content/themes/eurotourtheme3/images/tur-header-menu-tr.png) no-repeat;
+  background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat;
 }
 
 .tur-footer-menu .current-menu-item a {
   color: #b91616;
-  background: left url(/wp-content/themes/eurotourtheme3/images/tur-footer-menu-tr.png) no-repeat;
+  background: left url(/wp-content/themes/prokarpaty/images/tur-footer-menu-tr.png) no-repeat;
   text-decoration: none;
 }
 
 .navbar-default .navbar-nav .current-menu-parent a {
   color: #bc2425;
   background-color: none;
-  background: bottom url(/wp-content/themes/eurotourtheme3/images/tur-header-menu-tr.png) no-repeat;
+  background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat;
 }
 
 .tur-footer-menu .current-menu-parent a {
   color: #b91616;
-  background: left url(/wp-content/themes/eurotourtheme3/images/tur-footer-menu-tr.png) no-repeat;
+  background: left url(/wp-content/themes/prokarpaty/images/tur-footer-menu-tr.png) no-repeat;
   text-decoration: none;
 }
 
@@ -486,7 +486,7 @@
 .tur-content-calendar-exc-day-off {
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-calendar-day-off.png);
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-calendar-day-off.png);
   -webkit-box-shadow: 0px 1px 7px 0px rgba(255, 255, 255, 0.49);
           box-shadow: 0px 1px 7px 0px rgba(255, 255, 255, 0.49);
   width: 30px;
@@ -528,7 +528,7 @@
   float: left;
   position: relative;
   margin-left: 4px;
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-calendar-day-on.png);
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-calendar-day-on.png);
 }
 
 .tur-content-near-exc-day {
@@ -740,7 +740,7 @@
 }
 
 .tur-content-spec {
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-spec.png) no-repeat;
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-spec.png) no-repeat;
   height: 120px;
   position: relative;
 }
@@ -785,7 +785,7 @@
 
 .tur-footer-menu a:hover {
   color: #b91616;
-  background: left url(/wp-content/themes/eurotourtheme3/images/tur-footer-menu-tr.png) no-repeat;
+  background: left url(/wp-content/themes/prokarpaty/images/tur-footer-menu-tr.png) no-repeat;
   text-decoration: none;
 }
 
@@ -811,7 +811,7 @@
   font-size: 11px;
   font-weight: 400;
   text-align: left;
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-footer-xpride.png) no-repeat;
+  background: url(/wp-content/themes/prokarpaty/images/tur-footer-xpride.png) no-repeat;
 }
 
 .tur-footer-xpride-text {
@@ -852,7 +852,7 @@
   background-color: rgba(90, 123, 165, 0.9);
   color: #ffffff;
   border: none;
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-footer-callback-btn.png);
+  background: url(/wp-content/themes/prokarpaty/images/tur-footer-callback-btn.png);
   font-family: 'OpenSans', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -997,14 +997,14 @@
 }
 
 .tur-content-spec-left {
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-spec-left.png) no-repeat;
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-spec-left.png) no-repeat;
   height: 46px;
   position: absolute;
   top: 37px;
 }
 
 .tur-content-spec-right {
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-spec-right.png) no-repeat;
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-spec-right.png) no-repeat;
   height: 46px;
   position: absolute;
   top: 37px;
@@ -1053,7 +1053,7 @@
 }
 
 .tur-content-calendar-border {
-  background: url(/wp-content/themes/eurotourtheme3/images/tur-content-calendar2.png);
+  background: url(/wp-content/themes/prokarpaty/images/tur-content-calendar2.png);
   padding: 1px;
   -webkit-border-radius: 8px;
           border-radius: 8px;
@@ -2167,7 +2167,7 @@ a.prev {
   background-color: #f0f0f0;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-contacts-clock-big.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-contacts-clock-big.png);
   background-repeat: no-repeat;
   background-position: left bottom;
 }
@@ -2182,7 +2182,7 @@ a.prev {
   background-color: #f0f0f0;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-contacts-clock-big.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-contacts-clock-big.png);
   background-repeat: no-repeat;
   background-position: left bottom;
 }
@@ -2332,7 +2332,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-name.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-name.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2347,7 +2347,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-tel.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-tel.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2362,7 +2362,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-email.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-email.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2435,7 +2435,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-name.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-name.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2451,7 +2451,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-tel.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-tel.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2467,7 +2467,7 @@ a.prev {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-email.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-email.png);
   background-repeat: no-repeat;
   height: 42px;
   padding-left: 50px;
@@ -2483,7 +2483,7 @@ a.prev {
   font-size: 14px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-footer-name.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-footer-name.png);
   background-repeat: no-repeat;
   height: 34px;
   padding-left: 40px;
@@ -2498,7 +2498,7 @@ a.prev {
   font-size: 14px;
   font-weight: 400;
   text-align: left;
-  background-image: url(/wp-content/themes/eurotourtheme3/images/tur-callback-footer-tel.png);
+  background-image: url(/wp-content/themes/prokarpaty/images/tur-callback-footer-tel.png);
   background-repeat: no-repeat;
   height: 34px;
   padding-left: 40px;
@@ -2672,12 +2672,12 @@ a.prev {
 .active-head-menu {
   color: #bc2425 !important;
   background-color: none;
-  background: bottom url(/wp-content/themes/eurotourtheme3/images/tur-header-menu-tr.png) no-repeat;
+  background: bottom url(/wp-content/themes/prokarpaty/images/tur-header-menu-tr.png) no-repeat;
 }
 
 .active-footer-menu {
   color: #b91616 !important;
-  background: left url(/wp-content/themes/eurotourtheme3/images/tur-footer-menu-tr.png) no-repeat;
+  background: left url(/wp-content/themes/prokarpaty/images/tur-footer-menu-tr.png) no-repeat;
   text-decoration: none;
 }
 

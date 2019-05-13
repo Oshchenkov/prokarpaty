@@ -60,7 +60,7 @@
                             <?php  }
                     endforeach;
                 else : ?>
-                        <p><?php echo __('На данный момент график пуст.', 'EutoTour'); ?></p>
+                        <p><?php echo __('На данный момент график пуст.', 'prokarpaty'); ?></p>
                     <?php endif; ?>
                 </div>
             </div>

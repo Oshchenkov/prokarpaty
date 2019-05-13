@@ -30,7 +30,7 @@
                                     the_post_thumbnail();
                                 } ?>
                                 <div class="tur-news-date">
-                                    <img src="/wp-content/themes/eurotourtheme3/images/tur-content-news-date.png" alt="Дата">
+                                    <img src="/wp-content/themes/prokarpaty/images/tur-content-news-date.png" alt="Дата">
                                     <span class="tur-content-news-date3"><span class="glyphicon glyphicon-time"></span> <?php the_time('d.m'); ?></span>
                                 </div>
                             </a>
@@ -44,13 +44,13 @@
                                 <p><?php the_excerpt(); ?></p>
                             </div>
                             <div class="tur-news-more">
-                                <a href="<?php the_permalink(); ?>"><?php echo __('Подробнее..', 'EutoTour'); ?></a>
+                                <a href="<?php the_permalink(); ?>"><?php echo __('Подробнее..', 'prokarpaty'); ?></a>
                             </div>
                         </div>
                     </div><!-- /.row -->
                 <?php endwhile;
         else : ?>
-                <p><?php echo __('На данный момент новостей нет.', 'EutoTour'); ?></p>
+                <p><?php echo __('На данный момент новостей нет.', 'prokarpaty'); ?></p>
             <?php endif; ?>
 
 

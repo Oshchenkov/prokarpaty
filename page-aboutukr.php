@@ -53,7 +53,7 @@ $postID = get_the_ID();
 
         <?php $post = get_post(229) ?>
         <h1 class="container tur-our-exc-title mt-5">
-            <span class="tur-our-exc-title-red"><?php echo __('О', 'EutoTour'); ?> </span><?php echo __('КОМПАНИИ', 'EutoTour'); ?></h1>
+            <span class="tur-our-exc-title-red"><?php echo __('О', 'prokarpaty'); ?> </span><?php echo __('КОМПАНИИ', 'prokarpaty'); ?></h1>
         <div class="container tur-about-hello"><?php the_field('about_hello'); ?></div>
         <div class="container-fluid tur-about-line">
             <div class="row"></div>
@@ -113,11 +113,11 @@ $postID = get_the_ID();
                         </div>
                         <a class="left carousel-control" href="#tur-about-slider2" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left tur-about-slider-glyphicon-grey" aria-hidden="true"></span>
-                            <span class="sr-only"><?php echo __('Предыдущий', 'EutoTour'); ?></span>
+                            <span class="sr-only"><?php echo __('Предыдущий', 'prokarpaty'); ?></span>
                         </a>
                         <a class="right carousel-control" href="#tur-about-slider2" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right tur-about-slider-glyphicon-grey" aria-hidden="true"></span>
-                            <span class="sr-only"><?php echo __('Следующий', 'EutoTour'); ?></span>
+                            <span class="sr-only"><?php echo __('Следующий', 'prokarpaty'); ?></span>
                         </a>
                     </div>
                 </div>
@@ -218,7 +218,7 @@ $postID = get_the_ID();
                     <div class="col-lg-6">
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why1'); ?></p>
@@ -226,7 +226,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why2'); ?></p>
@@ -234,7 +234,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why3'); ?></p>
@@ -242,7 +242,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why4'); ?></p>
@@ -252,7 +252,7 @@ $postID = get_the_ID();
                     <div class="col-lg-6">
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why5'); ?></p>
@@ -260,7 +260,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why6'); ?></p>
@@ -268,7 +268,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-about-content-why-block-margin">
                             <div class="col-lg-2">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why.png" alt="why">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why.png" alt="why">
                             </div>
                             <div class="col-lg-10">
                                 <p class="tur-about-content-why-text"><?php the_field('about_why7'); ?></p>
@@ -354,7 +354,7 @@ $postID = get_the_ID();
             <div class="container">
                 <div class="row tur-about-content-why2-margin">
                     <div class="col-lg-1">
-                        <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why2.png" alt="why2">
+                        <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why2.png" alt="why2">
                     </div>
                     <div class="col-lg-11">
                         <p class="tur-about-content-why2-text"><?php the_field('about_block4_1'); ?></p>
@@ -362,7 +362,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="row tur-about-content-why2-margin">
                     <div class="col-lg-1">
-                        <img src="/wp-content/themes/eurotourtheme3/images/tur-about-content-why2.png" alt="why2">
+                        <img src="/wp-content/themes/prokarpaty/images/tur-about-content-why2.png" alt="why2">
                     </div>
                     <div class="col-lg-11">
                         <p class="tur-about-content-why2-text"><?php the_field('about_block4_2'); ?></p>

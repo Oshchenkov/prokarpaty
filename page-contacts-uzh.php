@@ -52,7 +52,7 @@ $postID = get_the_ID();
 
     <div class="container">
         <h1 class="container  tur-our-exc-title mt-5">
-            <?php echo __('НАШИ', 'EutoTour'); ?><span class="tur-our-exc-title-red"> <?php echo __('КОНТАКТЫ', 'EutoTour'); ?></span>
+            <?php echo __('НАШИ', 'prokarpaty'); ?><span class="tur-our-exc-title-red"> <?php echo __('КОНТАКТЫ', 'prokarpaty'); ?></span>
         </h1>
     </div><!-- /.container -->
     <div class="container d-none d-sm-block">
@@ -72,7 +72,7 @@ $postID = get_the_ID();
                     <div class="row tur-contacts-content-map-on-block-text">
                         <div class="row tur-contacts-map-on-block-text-margin">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-contacts-adress.png" alt="adress">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-contacts-adress.png" alt="adress">
                             </div>
                             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                                 <p class="tur-contacts-adress"><?php the_field('contacts_adress'); ?></p>
@@ -80,7 +80,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-contacts-map-on-block-text-margin">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-contacts-mail.png" alt="mail">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-contacts-mail.png" alt="mail">
                             </div>
                             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                                 <p class="tur-contacts-adress"><?php the_field('contacts_email'); ?></p>
@@ -88,7 +88,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-contacts-map-on-block-text-margin">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-contacts-skype.png" alt="skype">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-contacts-skype.png" alt="skype">
                             </div>
                             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                                 <p class="tur-contacts-adress"><?php the_field('contacts_skype'); ?></p>
@@ -96,7 +96,7 @@ $postID = get_the_ID();
                         </div>
                         <div class="row tur-contacts-map-on-block-text-margin">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <img src="/wp-content/themes/eurotourtheme3/images/tur-contacts-tel.png" alt="tel">
+                                <img src="/wp-content/themes/prokarpaty/images/tur-contacts-tel.png" alt="tel">
                             </div>
                             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
                                 <p class="tur-contacts-adress"><?php the_field('contacts_tels'); ?></p>
@@ -105,7 +105,7 @@ $postID = get_the_ID();
                         <div class="row tur-contacts-map-on-block-text-margin">
                             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
                             <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                                <button class="btn btn-danger tur-contacts-map-btn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm2"><?php echo __('ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК', 'EutoTour'); ?></button>
+                                <button class="btn btn-danger tur-contacts-map-btn" type="button" data-toggle="modal" data-target=".bs-example-modal-sm2"><?php echo __('ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК', 'prokarpaty'); ?></button>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ $postID = get_the_ID();
 
     <div class="container tur-head-form-all2 mb-5 ">
         <div class="row tur-head-form-title">
-            <?php echo __('ОСТАВЬТЕ ЗАЯВКУ, НАШИ МЕНЕДЖЕРЫ СВЯЖУТСЯ С ВАМИ В КОРОТКОЕ ВРЕМЯ', 'EutoTour'); ?>
+            <?php echo __('ОСТАВЬТЕ ЗАЯВКУ, НАШИ МЕНЕДЖЕРЫ СВЯЖУТСЯ С ВАМИ В КОРОТКОЕ ВРЕМЯ', 'prokarpaty'); ?>
         </div>
         <div class="row tur-head-form">
             <?php if (is_active_sidebar('front_top_cf')) : ?>
@@ -128,14 +128,14 @@ $postID = get_the_ID();
 
     <div class="workTime d-none d-sm-block">
         <div class="container ">
-            <p class="tur-contacts-grafik-title"><?php echo __('График работы', 'EutoTour'); ?></p>
+            <p class="tur-contacts-grafik-title"><?php echo __('График работы', 'prokarpaty'); ?></p>
         </div>
         <div class="container">
             <?php $post = get_post('313'); ?>
             <div class="row">
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block">
-                        <p><?php echo __('Понедельник', 'EutoTour'); ?></p>
+                        <p><?php echo __('Понедельник', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time"><?php the_field('grafik1'); ?></p>
@@ -143,7 +143,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block">
-                        <p><?php echo __('Вторник', 'EutoTour'); ?></p>
+                        <p><?php echo __('Вторник', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time"><?php the_field('grafik2'); ?></p>
@@ -151,7 +151,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block">
-                        <p><?php echo __('Среда', 'EutoTour'); ?></p>
+                        <p><?php echo __('Среда', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time"><?php the_field('grafik3'); ?></p>
@@ -159,7 +159,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block">
-                        <p><?php echo __('Четверг', 'EutoTour'); ?></p>
+                        <p><?php echo __('Четверг', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time"><?php the_field('grafik4'); ?></p>
@@ -167,7 +167,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block">
-                        <p><?php echo __('Пятница', 'EutoTour'); ?></p>
+                        <p><?php echo __('Пятница', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time"><?php the_field('grafik5'); ?></p>
@@ -175,7 +175,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block-red">
-                        <p><?php echo __('Суббота', 'EutoTour'); ?></p>
+                        <p><?php echo __('Суббота', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time-red"><?php the_field('grafik6'); ?></p>
@@ -183,7 +183,7 @@ $postID = get_the_ID();
                 </div>
                 <div class="col tur-content-near-exc-col tur-about-days-block">
                     <div class="tur-contacts-day-block-red">
-                        <p><?php echo __('Воскресенье', 'EutoTour'); ?></p>
+                        <p><?php echo __('Воскресенье', 'prokarpaty'); ?></p>
                     </div>
                     <div class="tur-content-near-exc-desc">
                         <p class="tur-contacts-grafik-time-red"><?php the_field('grafik7'); ?></p>

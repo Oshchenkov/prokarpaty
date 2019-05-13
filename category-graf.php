@@ -71,7 +71,7 @@
                                             <p class="tur-content-calendar-exc-day">сб</p>
                                         </div>
                                         <div class="tur-content-calendar-exc-day-<?php echo $onoff7 ?>">
-                                            <p class="tur-content-calendar-exc-day"><?php echo __('вс', 'EutoTour'); ?></p>
+                                            <p class="tur-content-calendar-exc-day"><?php echo __('вс', 'prokarpaty'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
                             <?php  }
                     endforeach;
                 else : ?>
-                        <p><?php echo __('На данный момент график пуст.', 'EutoTour'); ?></p>
+                        <p><?php echo __('На данный момент график пуст.', 'prokarpaty'); ?></p>
                     <?php endif; ?>
                 </div>
             </div>

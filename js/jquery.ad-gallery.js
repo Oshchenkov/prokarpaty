@@ -9,7 +9,7 @@
  */
 (function($) {
   $.fn.adGallery = function(options) {
-    var defaults = { loader_image: '/wp-content/themes/eurotourtheme3/images/loader.gif',
+    var defaults = { loader_image: '/wp-content/themes/prokarpaty/images/loader.gif',
                      start_at_index: 0,
                      thumb_opacity: 0.7,
                      animate_first_image: false,
