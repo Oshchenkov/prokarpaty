@@ -3756,6 +3756,56 @@ img {
   margin-top: 30px;
 }
 
+.tur-content-calendar-border {
+  width: 100%;
+}
+
+.services .img-responsive {
+  height: 100%;
+}
+
+.tur-about-content-part-margin {
+  margin-bottom: 20px;
+}
+
+.articles__row {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #000;
+}
+
+.articles .tur-news-paginator-block {
+  margin: 20px auto;
+}
+
+.testimonial_group {
+  display: none;
+}
+
+.testimonial_group:nth-child(1) {
+  display: block;
+}
+
+.tur-ecs2-btn-view-otz {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tur-ecs2-btn-view-otz > img {
+  margin: 0 5px;
+}
+
+.testimonial_group .testimonial .rr_review_text .drop_cap {
+  font-family: fantasy;
+}
+
 .breadcrumbWPML-nav {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -3866,6 +3916,25 @@ img {
 .tur-modal-callback-margin {
   width: 100%;
   margin: 20px auto 0 auto;
+}
+
+.linkInArticles__p {
+  margin: auto;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .linkInArticles__p {
+    font-size: 20px;
+  }
+}
+
+.row-color > .tur-ecs2-title1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .separatorImg {
