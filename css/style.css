@@ -3937,6 +3937,45 @@ img {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .contactPage .tur-head-form-all2 .wpcf7-form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.tur-about-slider-width {
+  margin-right: 0;
+}
+
+.left.carousel-control {
+  position: absolute;
+  left: -30px;
+  top: 33%;
+}
+
+.right.carousel-control {
+  position: absolute;
+  right: 0;
+  top: 33%;
+}
+
+.carousel-control .glyphicon {
+  font-size: 30px;
+}
+
+.tur-about-content-part-img-block > img {
+  height: 100%;
+  width: 100%;
+}
+
 .separatorImg {
   height: 50px;
   margin: 20px 0;

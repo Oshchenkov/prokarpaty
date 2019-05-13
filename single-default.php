@@ -462,8 +462,6 @@
                     <p class="tur-ecs2-title1"><?php echo __('Посмотреть другие экскурсии', 'prokarpaty'); ?></p>
                     <div id="carouselOtherExcursion" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-
-
                             <?php $x = 0; ?>
                             <?php query_posts('posts_per_page=4&cat=3' || 'posts_per_page=4&cat=68'); ?>
                             <?php $n = ' active';

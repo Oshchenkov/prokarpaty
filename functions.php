@@ -144,17 +144,6 @@ function theme_widgets_init()
 {
 
 	register_sidebar(array(
-		'name'          => __('Footer second_col widget', 'prokarpaty'),
-		'id'            => 'footer_second_col',    // ID should be LOWERCASE  ! ! !
-		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
-		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="d-none">',
-		'after_title'   => '</div>'
-	));
-
-	register_sidebar(array(
 		'name'          => __('Front page main contact form', 'prokarpaty'),
 		'id'            => 'front_top_cf',    // ID should be LOWERCASE  ! ! !
 		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
@@ -219,5 +208,17 @@ function theme_widgets_init()
 		'before_title'  => '<div class="d-none">',
 		'after_title'   => '</div>'
 	));
+
+	register_sidebar(array(
+		'name'          => __('Footer second_col widget', 'prokarpaty'),
+		'id'            => 'footer_second_col',    // ID should be LOWERCASE  ! ! !
+		'description'   => '', // Text description of what/where the sidebar is. Shown on widget management screen.
+		'class'         => '', // CSS class to assign to the Sidebar in the Appearance -> Widget admin page. 
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="d-none">',
+		'after_title'   => '</div>'
+	));
+
 }
 add_action('widgets_init', 'theme_widgets_init');

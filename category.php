@@ -22,7 +22,7 @@ get_header();
     */
 
     if (ICL_LANGUAGE_CODE == 'ru') {
-        $post = get_post(115); // Главный слайдер на всех страницах
+        $post = get_post(115);             // the_field from post (ACF)
     } elseif (ICL_LANGUAGE_CODE == 'uk') {
         $post = get_post(5702);
     } else {
